@@ -10,4 +10,10 @@ router.get("/", (req, res) => {
   //   });
 });
 
+router.get("/movies", (req, res) => {
+    Movie.find().then(movies => {
+        res.json(movies)
+    })
+})
+
 module.exports = router;
