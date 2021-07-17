@@ -5,7 +5,7 @@ const movieSchema = new Schema({
   title: { type: String },
   director: { type: String },
   stars: { type: [String] },
-  image: { type: String, default: "" },
+  image: { type: String, default: "https://i.imgur.com/lazpvPN.jpg" },
   description: { type: String },
   showtimes: { type: [String] },
 });

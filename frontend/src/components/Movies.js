@@ -14,7 +14,7 @@ function Movies(props) {
   // }
     () => {
     axios.get(`http://localhost:5000/movies`).then((res) => {
-      console.log(res.data);
+      //console.log(res.data);
       setMovies(res.data);
     });
   }, []
@@ -25,22 +25,29 @@ function Movies(props) {
   
     return movies.map((movie) => {
       return (
-      <div className="test">
+      <div className="movieCard">
         <img src={movie.image} />
         <h4>{movie.title}</h4>
-        <Link to={`/movies/${movie._id}`} >See more</Link>
+        <Link to={`/movie/${movie._id}`} >See more</Link>
       </div>)
   })};
 
   return (
     <div>
-      <h1 className="title">Ironhack Cinema</h1>
-      <h3 className="title">Click on the movie to check the showtimes!</h3>
-      <Link to="/" className="title">
-        <div>
-          <h3>Back to home</h3>
-        </div>
-      </Link>
+      <div className="header">
+        <h1 >Ironhack Cinema</h1>
+        <h4 >Click on the movie to check the showtimes!</h4>
+        <Link to="/" >
+          <div>
+            <h3>Back to home</h3>
+          </div>
+        </Link>
+        <Link to="/movies/new" >
+          <div>
+            <h3>Add a Movie</h3>
+          </div>
+        </Link>
+      </div>
       <div className="movies">{ShowMovies()}</div>
     </div>
   );
