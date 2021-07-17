@@ -11,10 +11,16 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/movies" render={(props) => <Movies {...props} />} />
         <Route
           exact
-          path="/movies"
-          render={(props) => <Movies {...props} />}
+          path="/movie/:dynamicId"
+          render={(props) => <MovieDetails {...props} />}
+        />
+        <Route
+          exact
+          path="/movies/new"
+          render={(props) => <AddMovie {...props} />}
         />
       </Switch>
     </div>

@@ -16,4 +16,18 @@ router.get("/movies", (req, res) => {
     })
 })
 
+router.get("/movie/:dynamicId", (req, res) => {
+         //res.json(req.params.dynamicId)
+         Movie.findOne({_id: req.params.dynamicId}).then( (movie) => {
+             res.json(movie)
+         })
+})
+
+router.post("/addmovie", (req, res) => {
+    console.log(("New movie: ", req.body));
+    Movie.create(req.body).then((movies) => {
+        res.json(movies)
+    })
+})
+
 module.exports = router;
