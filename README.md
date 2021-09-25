@@ -37,17 +37,17 @@ After forking and cloning the project, you have to **create two folders `fronten
 
 To do this run 
 ```
-npx create-react-app frontend
-cd frontend
-npm start
+$ npx create-react-app frontend
+$ cd frontend
+$ npm start
 ```
 and then in navigate to the root
 ```
-mkdir backend 
-cd backend
-npm init -y 
-touch index.js
-nodemon
+$ mkdir backend 
+$ cd backend
+$ npm init -y 
+$ touch index.js
+$ nodemon
 ```
 
 Now you are ready to start. 🚀
