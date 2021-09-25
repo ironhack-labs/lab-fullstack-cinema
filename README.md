@@ -33,13 +33,22 @@ $ git push origin master
 
 ### Iteration 0 | Initialize the project
 
-After forking and cloning the project, you will have to add a `.env` file:
+After forking and cloning the project, you have to **create two folders `frontend` and `backend`**.
 
+To do this run 
 ```
-PORT=5000
+npx create-react-app frontend
+cd frontend
+npm start
 ```
-
-And you have to **create two folders `frontend` and `backend`**.
+and then in navigate to the root
+```
+mkdir backend 
+cd backend
+npm init -y 
+touch index.js
+nodemon
+```
 
 Now you are ready to start. 🚀
 
